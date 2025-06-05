@@ -1,0 +1,32 @@
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, #202020),
+    url("https://res.cloudinary.com/dkaut65y6/image/upload/v1748792226/hero_psyzdi.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-family: "Rubik", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 40px;
+  }
+}

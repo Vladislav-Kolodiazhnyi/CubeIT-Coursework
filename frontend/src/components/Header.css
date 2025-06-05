@@ -1,0 +1,160 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 20px;
+  background-color: rgba(32, 32, 32, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+}
+
+.header-container a {
+  text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.site-name {
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+}
+
+.header-container.open .site-name {
+  color: #202020;
+}
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.menu-button .bar {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #ffd100;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-button.open .bar {
+  background-color: #202020;
+}
+
+.menu-button .bar.top {
+  top: 8px;
+}
+
+.menu-button .bar.middle {
+  top: 18px;
+}
+
+.menu-button .bar.bottom {
+  top: 28px;
+}
+
+.menu-button.open .bar.top {
+  transform: rotate(45deg);
+  top: 18px;
+}
+
+.menu-button.open .bar.middle {
+  opacity: 0;
+}
+
+.menu-button.open .bar.bottom {
+  transform: rotate(-45deg);
+  top: 18px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: transparent;
+  overflow: hidden;
+  transition: height 0.75s ease, background-color 0.75s ease;
+  z-index: 999;
+}
+
+.menu-overlay.open {
+  height: 100vh;
+  background-color: #ffd100;
+}
+
+.menu-overlay.open * {
+  color: #202020;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.menu a {
+  color: transparent;
+  text-decoration: none;
+  font-size: 48px;
+  padding: 15px 0;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  width: 100%;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 900;
+}
+
+.menu a:hover {
+  background-color: #202020;
+  color: #ffd100;
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-name {
+    font-size: 28px;
+  }
+
+  .menu a {
+    font-size: 32px;
+    padding: 12px 0;
+  }
+}
