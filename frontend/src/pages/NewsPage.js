@@ -7,7 +7,7 @@ function NewsPage() {
 
   useEffect(() => {
     axios
-      .get("http://192.168.1.111:5000/news") //Замінити
+      .get("https://cubeit-api.onrender.com/news")
       .then((res) => {
         setNewsItems(res.data);
       })
