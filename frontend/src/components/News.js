@@ -9,7 +9,7 @@ function News() {
 
   useEffect(() => {
     axios
-      .get("http://192.168.1.111:5000/news") //замінити після завантаження на хостинг ОБОВЯЗКОВО
+      .get("https://cubeit-api.onrender.com/news")
       .then((res) => {
         const latestNews = res.data.slice(0, 9);
         setNewsData(latestNews);
